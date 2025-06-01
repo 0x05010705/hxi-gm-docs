@@ -7,6 +7,12 @@
 
   <!-- Dark Theme -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable/dist/css/theme-simple-dark.css">
+
+  <!-- Optional: Improve font readability -->
+  <style>
+    body { font-family: system-ui, sans-serif; }
+    code { font-family: monospace; }
+  </style>
 </head>
 <body>
   <div id="app">Loading...</div>
@@ -14,16 +20,23 @@
   <!-- Configure Docsify -->
   <script>
     window.$docsify = {
-      name: 'Command Docs',
+      name: 'GM Command List',
       loadSidebar: true,
       themeable: {
         readyTransition: true,
         responsiveTables: true
+      },
+      search: {
+        paths: 'auto',
+        placeholder: 'Search commands...',
+        noData: 'No results!',
+        depth: 2
       }
-    }
+    };
   </script>
 
-  <!-- Load Docsify AFTER body is ready -->
+  <!-- Load Docsify & Plugins -->
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>
