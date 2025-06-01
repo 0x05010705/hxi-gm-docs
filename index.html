@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Command Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Dark Theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable/dist/css/theme-simple-dark.css">
+</head>
+<body>
+  <div id="app">Loading...</div>
+
+  <!-- Configure Docsify -->
+  <script>
+    window.$docsify = {
+      name: 'Command Docs',
+      loadSidebar: true,
+      themeable: {
+        readyTransition: true,
+        responsiveTables: true
+      }
+    }
+  </script>
+
+  <!-- Load Docsify AFTER body is ready -->
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+</body>
+</html>

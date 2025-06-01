@@ -1,0 +1,4 @@
+- [Home](README.md)
+- [Start Auction](commands/startauction.md)
+- [Bid](commands/bid.md)
+- [Check DKP](commands/checkdkp.md)
