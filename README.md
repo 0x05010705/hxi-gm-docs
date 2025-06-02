@@ -10,3 +10,5 @@ Welcome to the command documentation site. Use the sidebar to explore individual
 - [ ] Make Costume Enum Page
 - [ ] Make Key Item Enum Page
 - [ ] Make Item Enum Page
+- [ ] Make Title Enum Page
+- [ ] Make Zone Enum Page
