@@ -1,19 +1,11 @@
 <details>
-<summary>
-
-- Tier 0 (Player Commands)
-
-</summary>
+<summary>Tier 0 (Player Commands)</summary>
 
   - [!uptime](commands/uptime.md)
 
-</details>
+</details><br />
 <details>
-<summary>
-
-- Tier 1 GM Commands
-
-</summary>
+<summary>Tier 1 GM Commands</summary>
 
   - [!changejob](commands/changejob.md)
   - [!currenttime](commands/currenttime.md)
@@ -25,13 +17,9 @@
   - [!return](commands/return.md)
   - [!setstage](commands/setstage.md)
 
-</details>
+</details><br />
 <details>
-<summary>
-
-- Tier 2 GM Commands
-
-</summary>
+<summary>Tier 2 GM Commands</summary>
 
   - [!addkeyitem](commands/addkeyitem.md)
   - [!bring](commands/bring.md)
@@ -82,13 +70,9 @@
   - [!where](commands/where.md)
   - [!zone](commands/zone.md)
 
-</details>
+</details><br />
 <details>
-<summary>
-
-- Tier 3 GM Commands
-
-</summary>
+<summary>Tier 3 GM Commands</summary>
 
   - [!adddynatime](commands/adddynatime.md)
   - [!afkcheck](commands/afkcheck.md)
@@ -115,13 +99,9 @@
   - [!tp](commands/tp.md)
   - [!yell](commands/yell.md)
 
-</details>
+</details><br />
 <details>
-<summary>
-
-- Tier 4 GM Commands
-
-</summary>
+<summary>Tier 4 GM Commands</summary>
 
   - [!addallmaps](commands/addallmaps.md)
   - [!addallspells](commands/addallspells.md)
@@ -178,13 +158,9 @@
   - [!takexp](commands/takexp.md)
   - [!updateconquest](commands/updateconquest.md)
 
-</details>
+</details><br />
 <details>
-<summary>
-
-- Tier 5 GM Commands
-
-</summary>
+<summary>Tier 5 GM Commands</summary>
 
   - [!addabytime](commands/addabytime.md)
   - [!addallatma](commands/addallatma.md)
