@@ -15,6 +15,15 @@
   <style>
     body { font-family: system-ui, sans-serif; }
     code { font-family: monospace; }
+    .app-name,
+    .search input {
+      z-index: 2;
+    }
+
+    /* Hide content snippets in search results */
+    .search .results .matching {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -41,6 +50,6 @@
   <!-- Load Docsify & Plugins -->
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
-  <script src="//unpkg.com/docsify-copy-code"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-collapse/dist/docsify-collapse.min.js"></script>
 </body>
 </html>
