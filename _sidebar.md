@@ -1,4 +1,23 @@
 <details>
+<summary>Enums and IDs</summary>
+
+  - [Costumes](enums/costumes.md)
+  - [Currency](enums/currency.md)
+  - [Items](enums/items.md)
+  - [Fish](enums/fish.md)
+  - [Key Items](enums/keyitems.md)
+  - [Missions](enums/missions)
+    - [Mission Status](enums/missionstatus.md)
+  - [Mods](enums/mods.md)
+  - [Quests](enums/quests.md)
+  - [Skills](enums/skills.md)
+  - [Spells](enums/spells.md)
+  - [Status Effects](enums/statuseffects.md)
+  - [Titles](enums/titles.md)
+  - [Zones](enums/zones.md)
+
+</details><br />
+<details>
 <summary>Tier 0 (Player Commands)</summary>
 
   - [!uptime](commands/uptime.md)

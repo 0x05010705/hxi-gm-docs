@@ -12,3 +12,10 @@ Welcome to the command documentation site. Use the sidebar to explore individual
 - [ ] Make Item Enum Page
 - [ ] Make Title Enum Page
 - [ ] Make Zone Enum Page
+- [ ] Make Mod Enum Page
+- [ ] Make COP Mission Status Enum Page
+- [ ] Make Currency Enum
+- [ ] Make Status Effect Enum
+- [ ] Make Ranked Fish Enum
+- [ ] Make Spells Enum
+- [ ] Make Skill Enum
