@@ -1,29 +1,3 @@
-# !checkquest
-
-**Tags:** `player`, `quest`
-
-Prints the status of the given quest ID from the specified log ID.
-
-**Usage**: `!checkquest <logId> <questId> (player)`
-
-**Parameters**:
-- `logId`: The number for the quest log you are checking
-  - Options:
-    - 0: San D'Oria
-    - 1: Bastok
-    - 2: Windurst
-    - 3: Jeuno
-    - 4: Other Areas
-    - 5: Outlands
-    - 6: Aht Urghan
-    - 7: Crystal War
-    - 8: Abyssea
-    - 9: Adoulin
-    - 10: Coalition
-- `questId`: The ID of the quest for the associated log ID
-  - See Quest Sections Below for Quest IDs
-- `player`: (Optional) The name of the player to check
-
 **Quest IDs**:
 <details>
 <summary>San D'Oria</summary>

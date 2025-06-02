@@ -18,7 +18,7 @@ Prints the current Mission ID for the given Log ID and target player.
     - 6: Chains of Promathia
     - 7: Assaults
     - 8: Campaign
-    - 9: A Crystalline Prohecy
+    - 9: A Crystalline Prophecy
     - 10: A Moogle Kupo d'Etat
     - 11: A Shantotto Ascension
     - 12: Seekers of Adoulin

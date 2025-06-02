@@ -1,13 +1,13 @@
-# !checkquest
+# !completequest
 
 **Tags:** `player`, `quest`
 
-Prints the status of the given quest ID from the specified log ID.
+Completes the given quest for the GM or target player.
 
-**Usage**: `!checkquest <logId> <questId> (player)`
+**Usage**: `!completequest <logID> <questID> (player)`
 
 **Parameters**:
-- `logId`: The number for the quest log you are checking
+- `logID`: The number for the quest log
   - Options:
     - 0: San D'Oria
     - 1: Bastok
@@ -20,8 +20,8 @@ Prints the status of the given quest ID from the specified log ID.
     - 8: Abyssea
     - 9: Adoulin
     - 10: Coalition
-- `questId`: The ID of the quest for the associated log ID
-  - See Quest Sections Below for Quest IDs
+- `questID`: The number of the quest ID to complete
+  - See Quest Section Below for Quest IDs
 - `player`: (Optional) The name of the player to check
 
 **Quest IDs**:

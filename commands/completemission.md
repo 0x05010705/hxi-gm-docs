@@ -1,14 +1,13 @@
-# !checkmissionstatus
+# !completemission
 
-**Tags:** `player`, `mission`, `status`
+**Tags:** `player`, `mission`
 
-Prints the current Mission Status for the given Log ID and target player.
+Completes the given mission for the target player, if that mission is currently active.
 
-**Usage**: `!checkmissionstatus <player> <logId> <missionID>`
+**Usage**: `!completemission <logID> <missionID> (player)`
 
 **Parameters**:
-- `player`: The name of the player to check
-- `logId`:  The number for the mission log you are checking
+- `logId`: The number for the mission log you are checking
   - Options:
     - 0: San D'Oria
     - 1: Bastok
@@ -19,12 +18,14 @@ Prints the current Mission Status for the given Log ID and target player.
     - 6: Chains of Promathia
     - 7: Assaults
     - 8: Campaign
-    - 9: A Crystalline Prohecy
+    - 9: A Crystalline Prophecy
     - 10: A Moogle Kupo d'Etat
     - 11: A Shantotto Ascension
     - 12: Seekers of Adoulin
     - 13: Rhapsodies of Vana'diel
-- `missionID`: The mission ID to check
+- `missionID`: The ID of the mission to complete
+  - See Mission Section below for Mission IDs
+- `player`: (Optional) The name of the player to complete the mission for
 
 **Mission IDs**:
 <details>
