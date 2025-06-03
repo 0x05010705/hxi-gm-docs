@@ -8,5 +8,7 @@ Adds a key item to the player.
 
 **Parameters**:
 - `key_item_id`: The name of the key item to give to the player
-  - Special Note: The internal name must be used (IE: vial_of_dream_sand)
 - `player`: (Optional) The name of the player to give the key item.
+
+**IDs**:
+- [Key Item IDs](enums/keyitems.md)

@@ -4,7 +4,6 @@
   - [Costumes](enums/costumes.md)
   - [Currency](enums/currency.md)
   - [Items](enums/items.md)
-  - [Fish](enums/fish.md)
   - [Key Items](enums/keyitems.md)
   - [Missions](enums/missions)
     - [Mission Status](enums/missionstatus.md)
@@ -12,7 +11,7 @@
   - [Quests](enums/quests.md)
   - [Skills](enums/skills.md)
   - [Spells](enums/spells.md)
-  - [Status Effects](enums/statuseffects.md)
+  - [Status Effects](enums/effects.md)
   - [Titles](enums/titles.md)
   - [Zones](enums/zones.md)
 

@@ -8,3 +8,6 @@ Caps a specific skill.
 
 **Parameters**:
 - `skillId`: The ID of the skill to cap
+
+**IDs**:
+- [Skill IDs](enums/skills.md)

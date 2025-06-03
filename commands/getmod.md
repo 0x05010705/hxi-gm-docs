@@ -8,3 +8,6 @@ Prints the value for the specified mod ID of the player or cursor target.
 
 **Parameters**:
 - `modID`: The ID of the mod to check
+
+**IDs**:
+- [Mod IDs](enums/mods.md)

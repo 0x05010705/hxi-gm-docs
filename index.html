@@ -4,57 +4,109 @@
   <meta charset="UTF-8">
   <title>Command Documentation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Dark Theme -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable/dist/css/theme-simple-dark.css">
-
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
-
-  <!-- Optional: Improve font readability -->
   <style>
     body { font-family: system-ui, sans-serif; }
     code { font-family: monospace; }
-    .app-name,
-    .search input {
-      z-index: 2;
+    .app-name, .search input { z-index: 2; }
+    .search .matching-post > a > p { display: none !important; }
+    .sidebar .search .clear-button { padding: 10px 10px; }
+
+    #password-gate {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; height: 100vh; background: #111; color: white;
     }
 
-    /* Hide content snippets in search results */
-    .search .matching-post > a > p {
-      display: none !important;
+    #password-gate input {
+      padding: 10px; font-size: 1em; margin: 10px;
     }
 
-    /* Re-center the clear search button */
-    .sidebar .search .clear-button {
-      padding: 10px 10px;
+    #password-gate button {
+      padding: 10px 20px; font-size: 1em; cursor: pointer;
     }
+
+    #app { display: none; }
   </style>
 </head>
 <body>
+
+  <div id="password-gate">
+    <h2>Enter Password</h2>
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="checkPassword()">Enter</button>
+    <p id="error" style="color: red;"></p>
+  </div>
+
   <div id="app">Loading...</div>
 
-  <!-- Configure Docsify -->
   <script>
-    window.$docsify = {
-      name: 'HXI GM Command List',
-      loadSidebar: true,
-      themeable: {
-        readyTransition: true,
-        responsiveTables: true
-      },
-      search: {
-        paths: 'auto',
-        placeholder: 'Search commands...',
-        noData: 'No results!',
-        depth: 2
-      },
-    };
+    const sessionKey = "docsify_auth_time";
+    const sessionHashKey = "docsify_auth_hash";
+    const timeoutMs = 60 * 60 * 1000; // 1 hour
+    const correctHash = "2ca4a34e39e83c64aecdc8c77db9db52ef0ec5cd8eb2f62283d20161247f9f16";
+
+    async function sha256(str) {
+      const buffer = new TextEncoder().encode(str);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', buffer);
+      return [...new Uint8Array(hashBuffer)].map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function checkPassword() {
+      const input = document.getElementById('password').value;
+      const hashed = await sha256(input);
+
+      if (hashed === correctHash) {
+        sessionStorage.setItem(sessionKey, Date.now().toString());
+        sessionStorage.setItem(sessionHashKey, hashed);
+        unlockDocs();
+      } else {
+        document.getElementById('error').textContent = "Incorrect password.";
+      }
+    }
+
+    function unlockDocs() {
+      document.getElementById('password-gate').style.display = 'none';
+      document.getElementById('app').style.display = 'block';
+
+      window.$docsify = {
+        name: 'HXI GM Command List',
+        loadSidebar: true,
+        themeable: {
+          readyTransition: true,
+          responsiveTables: true
+        },
+        search: {
+          paths: 'auto',
+          placeholder: 'Search commands...',
+          noData: 'No results!',
+          depth: 2
+        },
+      };
+
+      const scripts = [
+        '//unpkg.com/docsify/lib/docsify.min.js',
+        '//unpkg.com/docsify/lib/plugins/search.min.js',
+        'https://cdn.jsdelivr.net/npm/docsify-collapse/dist/docsify-collapse.min.js'
+      ];
+
+      scripts.forEach(src => {
+        const s = document.createElement('script');
+        s.src = src;
+        document.body.appendChild(s);
+      });
+    }
+
+    async function autoLoginIfValid() {
+      const lastLogin = parseInt(sessionStorage.getItem(sessionKey), 10);
+      const storedHash = sessionStorage.getItem(sessionHashKey);
+      if (lastLogin && storedHash && (Date.now() - lastLogin < timeoutMs) && storedHash === correctHash) {
+        unlockDocs();
+      }
+    }
+
+    autoLoginIfValid();
   </script>
 
-  <!-- Load Docsify & Plugins -->
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-collapse/dist/docsify-collapse.min.js"></script>
 </body>
 </html>

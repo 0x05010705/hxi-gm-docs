@@ -1,4 +1,20 @@
-**Quest IDs**:
+# Quest Log IDs
+
+```plaintext
+San D'Oria          = 1
+Bastok              = 2
+Windurst            = 3
+Jeuno               = 4
+Other Areas         = 5
+Outlands            = 6
+Aht Urghan          = 7
+Crystal War         = 8
+Abyssea             = 9
+Adoulin             = 10
+Coalition           = 11
+```
+
+# Quest IDs
 <details>
 <summary>San D'Oria</summary>
 

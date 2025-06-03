@@ -12,8 +12,6 @@ Places the target player on the specified mount ID
 - `player`: (Optional) The name of the player to place on mount
 
 **Mounts**:
-<details>
-<summary>Mount IDs</summary>
 
 ```plaintext
     CHOCOBO        = 0,
@@ -52,5 +50,3 @@ Places the target player on the specified mount ID
     IXION          = 35,
     PHUABO         = 36,
 ```
-
-</details>

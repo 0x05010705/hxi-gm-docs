@@ -13,3 +13,6 @@ Adds the given effect to the player
 - `duration`: (Optional) The duration, in seconds, of the effect
 - `subId`: (Optional) The ID of the sub-effect to add to the base effect
 - `subPower`: (Optional) The strength of the sub-effect
+
+**IDs**:
+- [Effect IDs](enums/effects.md)

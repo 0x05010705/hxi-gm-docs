@@ -12,3 +12,6 @@ Sets a quest variable on the target player
 - `questId`: The ID of the Quest for the specified section
 - `variable`: The name of the variable to adjust
 - `value`: The value the variable should be set to
+
+**IDs**:
+- [Quest IDs](enums/quests.md)

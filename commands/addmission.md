@@ -10,3 +10,6 @@ Adds a mission to the specified player's mission log.
 - `logId`: The ID of the associated mission
 - `missionId`: The ID of the mission for the associated log
 - `player`: (Optional) The name of the player to target
+
+**IDs**:
+- [Mission IDs](enums/missions.md)
