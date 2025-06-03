@@ -1,10 +1,10 @@
-# !addquest
+# !quest
 
 **Tags:** `quest`
 
-Adds a quest to the given targets quest log.
+Uses Menus to add/delete/complete Quests IDs, update/clear quest variables, etc.
 
-**Usage**: `!addquest <logId> <questId> (player)`
+**Usage**: `!quest <logId> <questId> (player)`
 
 **Parameters**:
 - `logId`: The ID of the associated quest area
