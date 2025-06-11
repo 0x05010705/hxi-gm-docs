@@ -19,16 +19,17 @@
 <details>
 <summary>Tier 0 (Player Commands)</summary>
 
+  - [!unstuck](commands/unstuck.md)
   - [!uptime](commands/uptime.md)
 
 </details><br />
-<details>
+<details class="tier-1">
 <summary>Tier 1 GM Commands</summary>
 
   - None
 
 </details><br />
-<details>
+<details class="tier-2">
 <summary>Tier 2 GM Commands</summary>
 
   - [!addkeyitem](commands/addkeyitem.md)
@@ -65,6 +66,7 @@
   - [!goto](commands/goto.md)
   - [!gotocell](commands/gotocell.md)
   - [!gotoname](commands/gotoname.md)
+  - [!gotopvpzone](commands/gotopvpzone.md)
   - [!haskeyitem](commands/haskeyitem.md)
   - [!hasitem](commands/hasitem.md)
   - [!hastitle](commands/hastitle.md)
@@ -81,15 +83,18 @@
   - [!reset](commands/reset.md)
   - [!return](commands/return.md)
   - [!send](commands/send.md)
+  - [!sendtostands](commands/sendtostands.md)
   - [!speed](commands/speed.md)
+  - [!spin](commands/spin.md)
   - [!togglegm](commands/togglegm.md)
   - [!up](commands/up.md)
   - [!wallhack](commands/wallhack.md)
   - [!where](commands/where.md)
+  - [!yell](commands/yell.md)
   - [!zone](commands/zone.md)
 
 </details><br />
-<details>
+<details class="tier-3">
 <summary>Tier 3 GM Commands</summary>
 
   - [!adddynatime](commands/adddynatime.md)
@@ -99,9 +104,18 @@
   - [!delmission](commands/delmission.md)
   - [!delquest](commands/delquest.md)
   - [!despawnmob](commands/despawnmob.md)
+  - [!dynadespawnall](commands/dynadespawnall.md)
+  - [!dynagranttitle](commands/dynagranttitle.md)
+  - [!dynasetwave](commands/dynasetwave.md)
+  - [!dynaspawn](commands/dynaspawn.md)
+  - [!dynaspawnmegaboss](command/dynaspawnmegaboss.md)
+  - [!dynaspawnnm](commands/dynaspawnnm.md)
   - [!equipjob](commands/equipjob.md)
   - [!garrison](commands/garrison.md)
   - [!getallmods](commands/getallmods.md)
+  - [!getdynainstance](commands/getdynainstance.md)
+  - [!getdynavar](commands/getdynavar.md)
+  - [!getdynavars](commands/getdynavars.md)
   - [!geteffects](commands/geteffects.md)
   - [!getid](commands/getid.md)
   - [!getitemname](commands/getitemname.md)
@@ -109,10 +123,17 @@
   - [!getmod](commands/getmod.md)
   - [!getstats](commands/getstats.md)
   - [!gettraits](commands/gettraits.md)
+  - [!giveglass](commands/giveglass.md)
   - [!gotoid](commands/gotoid.md)
+  - [!henmgivepop](commands/henmgivepop.md)
+  - [!henmresetclears](commands/henmresetclears.md)
+  - [!henmresetlockout](commands/henmresetlockout.md)
+  - [!henmsetclear](command/henmsetclear.md)
   - [!hp](commands/hp.md)
   - [!immortal](commands/immortal.md)
   - [!mobhere](commands/mobhere.md)
+  - [!poscam](commands/poscam.md)
+  - [!resetdynaplayer](commands/resetdynaplayer.md)
   - [!setmissionstatus](commands/setmissionstatus.md)
   - [!setplayervar](commands/setplayervar.md)
   - [!setprogress](commands/setprogress.md)
@@ -121,7 +142,7 @@
   - [!yell](commands/yell.md)
 
 </details><br />
-<details>
+<details class="tier-4">
 <summary>Tier 4 GM Commands</summary>
 
   - [!addallmaps](commands/addallmaps.md)
@@ -154,11 +175,13 @@
   - [!givegil](commands/givegil.md)
   - [!giveitem](commands/giveitem.md)
   - [!givexp](commands/givexp.md)
+  - [!homepointmoogle](commands/homepointmoogle.md)
   - [!mission](commands/mission.md)
   - [!mp](commands/mp.md)
   - [!npchere](commands/npchere.md)
   - [!petgodmode](commands/petgodmode.md)
   - [!pettp](commands/pettp.md)
+  - [!pvpmoogle](commands/pvpmoogle.md)
   - [!quest](commands/quest.md)
   - [!setallegiance](commands/setallegiance.md)
   - [!setbag](commands/setbag.md)
@@ -182,7 +205,7 @@
   - [!updateconquest](commands/updateconquest.md)
 
 </details><br />
-<details>
+<details class="tier-5">
 <summary>Tier 5 GM Commands</summary>
 
   - [!addabytime](commands/addabytime.md)
@@ -197,6 +220,7 @@
   - [!animatenpc](commands/animatenpc.md)
   - [!animatesubnpc](commands/animatesubnpc.md)
   - [!animation](commands/animation.md)
+  - [!annymoogle](commands/annymoogle.md)
   - [!breaklinkshell](commands/breaklinkshell.md)
   - [!build](commands/build.md)
   - [!checkinteraction](commands/checkinteraction.md)
@@ -217,6 +241,7 @@
   - [!givels](commands/givels.md)
   - [!givemagianitem](commands/givemagianitem.md)
   - [!givestafflinkshell](commands/givestafflinkshell.md)
+  - [!ianim](commands/ianim.md)
   - [!inject](commands/inject.md)
   - [!injectaction](commands/injectaction.md)
   - [!instance](commands/instance.md)
@@ -253,6 +278,7 @@
   - [!setplayernation](commands/setplayernation.md)
   - [!setstage](commands/setstage.md)
   - [!sleep](commands/sleep.md)
+  - [!spawndynamicmob](commands/spawndynamicmob.md)
   - [!time](commands/time.md)
   - [!trustengage](commands/trustengage.md)
 

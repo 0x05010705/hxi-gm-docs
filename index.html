@@ -18,13 +18,9 @@
       justify-content: center; height: 100vh; background: #111; color: white;
     }
 
-    #password-gate input {
-      padding: 10px; font-size: 1em; margin: 10px;
-    }
+    #password-gate input { padding: 10px; font-size: 1em; margin: 10px; }
 
-    #password-gate button {
-      padding: 10px 20px; font-size: 1em; cursor: pointer;
-    }
+    #password-gate button { padding: 10px 20px; font-size: 1em; cursor: pointer; }
 
     #app { display: none; }
   </style>
@@ -39,12 +35,17 @@
   </div>
 
   <div id="app">Loading...</div>
+  <button id="logout-button" onclick="logout()" style="position: fixed; top: 10px; right: 10px; display: none; z-index: 1000;">
+    Logout
+  </button>
 
   <script>
     const sessionKey = "docsify_auth_time";
     const sessionHashKey = "docsify_auth_hash";
     const timeoutMs = 60 * 60 * 1000; // 1 hour
-    const correctHash = "2ca4a34e39e83c64aecdc8c77db9db52ef0ec5cd8eb2f62283d20161247f9f16";
+
+    // ✅ Replace this with your hashed password
+    const validHash = "669c7664935c7e2ba860cd4fab8a20acc32402230d7a606d76b542649a03b029";
 
     async function sha256(str) {
       const buffer = new TextEncoder().encode(str);
@@ -56,7 +57,7 @@
       const input = document.getElementById('password').value;
       const hashed = await sha256(input);
 
-      if (hashed === correctHash) {
+      if (hashed === validHash) {
         sessionStorage.setItem(sessionKey, Date.now().toString());
         sessionStorage.setItem(sessionHashKey, hashed);
         unlockDocs();
@@ -68,6 +69,7 @@
     function unlockDocs() {
       document.getElementById('password-gate').style.display = 'none';
       document.getElementById('app').style.display = 'block';
+      document.getElementById('logout-button').style.display = 'block';
 
       window.$docsify = {
         name: 'HXI GM Command List',
@@ -81,8 +83,21 @@
           placeholder: 'Search commands...',
           noData: 'No results!',
           depth: 2
-        },
+        }
       };
+
+      const interval = setInterval(() => {
+        if (window.Docsify && window.$docsify) {
+          if (!window.$docsify.plugins) window.$docsify.plugins = [];
+          window.$docsify.plugins.push(hook => {
+            hook.doneEach(() => {
+              console.log("Docsify render complete.");
+              // You could optionally filter content here
+            });
+          });
+          clearInterval(interval);
+        }
+      }, 50);
 
       const scripts = [
         '//unpkg.com/docsify/lib/docsify.min.js',
@@ -93,14 +108,22 @@
       scripts.forEach(src => {
         const s = document.createElement('script');
         s.src = src;
+        s.defer = true;
         document.body.appendChild(s);
       });
+    }
+
+    function logout() {
+      sessionStorage.removeItem(sessionKey);
+      sessionStorage.removeItem(sessionHashKey);
+      location.reload();
     }
 
     async function autoLoginIfValid() {
       const lastLogin = parseInt(sessionStorage.getItem(sessionKey), 10);
       const storedHash = sessionStorage.getItem(sessionHashKey);
-      if (lastLogin && storedHash && (Date.now() - lastLogin < timeoutMs) && storedHash === correctHash) {
+
+      if (lastLogin && storedHash === validHash && (Date.now() - lastLogin < timeoutMs)) {
         unlockDocs();
       }
     }
